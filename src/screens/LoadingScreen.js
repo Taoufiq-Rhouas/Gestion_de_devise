@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import styled from "styled-components";
-// import LottieView from 'lottie-react-native';
+import LottieView from 'lottie-react-native';
 import {UserContext} from '../context/UserContext';
 import {FirebaseContext} from '../context/FirebaseContext';
 import Text from "../components/Text";
@@ -24,17 +24,17 @@ export default LoadingScreen = () => {
                 setUser((state) => ({ ...state,isLoggedIn: false}));
             }
             
-        }, 500)
+        }, 1000)
     },[])
       return (
     <Container>
         <Text title color="#FFFFFF">My Money</Text>
-        {/* <LottieView 
+        <LottieView 
             source={require("../../assets/62981-loader.json")} 
             autoPlay 
             loop 
             // style={{ width: "100% " }} 
-        /> */}
+        />
     </Container>
   );
 };

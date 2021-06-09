@@ -1,6 +1,35 @@
 // import React from 'react';
 // import {View ,Text, StyleSheet} from "react-native";
 
+// export default PostScreen = () => {
+//       return (
+//     <View style={styles.container} >
+//         <Text>PostScreen screen</Text>
+//     </View>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//     container: {
+//         flex: 1,
+//         justifyContent: "center",
+//         alignItems: "center",
+//     }
+// });
+
+
+
+
+
+
+
+// V22
+
+
+
+// import React from 'react';
+// import {View ,Text, StyleSheet} from "react-native";
+
 // export default MessageScreen = () => {
 //       return (
 //     <View style={styles.container} >
@@ -31,7 +60,7 @@ import COLORS from '../consts/colors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import axios from "axios";
 
-export default MessageScreen = ({ route, navigation }) => {
+export default DepositScreen = ({ route, navigation }) => {
 
     // const DATA= [
     //     {
@@ -170,6 +199,7 @@ export default MessageScreen = ({ route, navigation }) => {
                 flex:1,
             }}
         >
+          <ScrollView>
             <View style={{
                     justifyContent:'center',
                     alignItems:'center',
@@ -185,7 +215,7 @@ export default MessageScreen = ({ route, navigation }) => {
               <View style={styles.cartCard1}>
                 {/*  */}
                 <Text style={{fontSize:17,fontWeight:'bold'}}>Wallet</Text>
-                <Text style={{fontSize:17,fontWeight:'bold'}}>TOTAL SOLD : {totalSold} €</Text>
+                <Text style={{fontSize:17,fontWeight:'bold'}}>TOTAL SOLD : {(totalSold).toFixed(2)} €</Text>
                 <View style={styles.cartCard2} >
                   <View style={{
                       height:100,
@@ -261,63 +291,12 @@ export default MessageScreen = ({ route, navigation }) => {
                 {/*  */}
               </View>
             </ScrollView>
-            <View style={{ marginTop:8 }}>
-                {/* <Text>Message screen</Text>
-                <Text style={{fontSize:17,fontWeight:'bold'}}>Total mony: </Text>
-                <TextInput 
-                    style={styles.input}
-                    // placeholder='new todo...'
-                    keyboardType="numeric"
-                    // value={`${fromAmountMAD}`}
-                    // onChangeText={setAmountMAD}
-                /> */}
-
-
-
-
-                {/* <SafeAreaView style={styles.areaView}>
-                    <ScrollView style={styles.scrollView}>
-                    <View style={styles.cryptoLists}>
-                        {
-                        DATA.map((data, i) => {
-                            return (
-                            <View style={styles.cryptoListsData} key={i}>
-                                <View style={styles.cryptoListsTopData}>
-                                <Image source={{uri: `${data.img}`}}  style={{width:40, height:40,borderRadius:30}} />
-                                <Text>{data.symbol}</Text>
-                                <Text>{data.name}</Text>
-                                <Text>{data.price} $</Text>
-
-                                <Pressable style={[styles.button, styles.buttonOpen]} onPress={() =>{ navigation.navigate("Chart", {  data: data.redirectTo, cryptoPrice: data.price }); }}> */}
-                                {/* navigation.navigate("Chart", { user }); */}
-                                {/* <Text>SHOWING chart</Text>
-                                </Pressable>
-
-                                </View> */}
-                                {/* <Text style={styles.cryptoListsTxt}>{data.price} $</Text> */}
-                            {/* </View>
-                            )
-                        })
-                        }
-                    </View>
-                    </ScrollView>
-                </SafeAreaView> */}
-
-
-
-
-
-
-
-
-
-
-
-
+            <View style={{ marginTop:"12%" }}>
                 <Logout onPress={logOut}>
                     <TextParam style={{fontWeight:'bold',fontSize:18, color:COLORS.white}} >Log out</TextParam>
                 </Logout>
             </View>
+          </ScrollView>
         </SafeAreaView>
     );
 };
@@ -377,7 +356,9 @@ const styles = StyleSheet.create({
         padding:0,
       //   marginTop:60,
         marginBottom:2,
-        height:480
+        // height:458
+        // height:450
+        height:"50%"
       //   width: '80%',
         // flexDirection: "column",
     },
@@ -386,7 +367,7 @@ const styles = StyleSheet.create({
         elevation: 15,
         borderRadius: 10,
         backgroundColor: COLORS.white,
-        marginVertical: 80,
+        marginVertical: 60,
         marginHorizontal: 20,
         paddingHorizontal: 10,
         // flexDirection: 'row',

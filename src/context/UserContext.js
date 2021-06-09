@@ -9,6 +9,7 @@ const UserProvider = (props) => {
         uid:"",
         isLoggedIn: null,
         profilePhotoUrl: "default"
+        // currencySearch:"MAD"
     })
 
     return <UserContext.Provider value={[state, setState]}>
